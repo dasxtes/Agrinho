@@ -1,0 +1,504 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    transition: all 0.3s ease; /* Para transições de acessibilidade */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f7f6; /* Fundo claro para o modo normal */
+    color: #333; /* Cor do texto padrão para um cinza escuro (quase preto) */
+    line-height: 1.6;
+    transition: all 0.3s ease; /* Para transições de acessibilidade */
+}
+
+/* Restante do CSS normal... */
+
+/* Adicione ou modifique esta parte no final do seu style.css, se já não tiver */
+/* Estilos para o Blog (explore-blog.html) */
+.blog-post h2 {
+    /* ... seus estilos existentes ... */
+    text-align: left; /* Garante que o título do post não centralize */
+}
+
+/* ... e as outras classes para as novas páginas ... */
+
+
+/* MODO DE ALTO CONTRASTE - REVISADO */
+body.high-contrast {
+    background-color: #000 !important; /* Fundo totalmente preto */
+    color: #FFF !important; /* Texto geral branco */
+}
+
+body.high-contrast header,
+body.high-contrast section,
+body.high-contrast footer,
+body.high-contrast .page-section, /* Fundo das seções de conteúdo */
+body.high-contrast .blog-post, /* Fundo dos posts do blog */
+body.high-contrast .project-card, /* Fundo dos cards de projeto */
+body.high-contrast .section-block, /* Fundo dos blocos na seção "Sobre" */
+body.high-contrast .image-placeholder, /* Fundo do placeholder de imagem */
+body.high-contrast .text-placeholder, /* Fundo dos placeholders de texto (se ainda usar) */
+body.high-contrast .text-placeholder-small { /* Fundo dos placeholders de texto pequenos (se ainda usar) */
+    background-color: #000 !important; /* Fundo totalmente preto para todos os elementos que têm fundo branco no modo normal */
+    border-color: #FFF !important; /* Borda branca para visibilidade */
+    color: #FFF !important; /* Garante que o texto dentro desses blocos seja branco */
+}
+
+/* LINKS E TEXTOS PRINCIPAIS EM AMARELO NEON */
+body.high-contrast a,
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3 {
+    color: #FFFF00 !important; /* Links e títulos em amarelo neon */
+}
+
+/* TEXTOS DE PARÁGRAFOS E LISTAS EM BRANCO */
+body.high-contrast p,
+body.high-contrast li,
+body.high-contrast .slogan,
+body.high-contrast .post-meta,
+body.high-contrast .project-card p,
+body.high-contrast .footer-info p {
+    color: #FFF !important; /* Parágrafos e outros textos secundários em branco */
+}
+
+/* LOGO EM ALTO CONTRASTE */
+body.high-contrast .logo-link img {
+    /* Inverte as cores da imagem para que a logo seja visível.
+       Se a logo for preta, isso a tornará branca.
+       Se tiver cores, pode precisar de ajuste manual ou uma logo SVG. */
+    filter: brightness(0) invert(1) !important;
+}
+
+/* BOTÕES DE NAVEGAÇÃO E GRUPOS DE BOTÕES */
+body.high-contrast .button,
+body.high-contrast .button-group .button,
+body.high-contrast header nav ul li a {
+    background-color: #FFFF00 !important; /* Fundo amarelo para botões */
+    color: #000 !important; /* Texto preto para botões */
+    border: 2px solid #FFF !important; /* Borda branca */
+}
+
+body.high-contrast .button:hover,
+body.high-contrast .button-group .button:hover,
+body.high-contrast header nav ul li a:hover {
+    background-color: #FFF !important; /* Fundo branco ao passar o mouse */
+    color: #000 !important; /* Texto preto ao passar o mouse */
+}
+
+/* DESTAQUES E ÍCONES */
+body.high-contrast .highlight,
+body.high-contrast #projetos ul li::before /* Ícone de checkmark */ {
+    color: #00FFFF !important; /* Ciano para destaques e ícones */
+}
+
+/* CONTROLES DE ACESSIBILIDADE (os próprios botões de A+/A-/Contraste) */
+body.high-contrast .accessibility-controls button {
+    background-color: #333 !important;
+    color: #FFF !important;
+    border: 1px solid #FFF !important;
+}
+
+body.high-contrast .accessibility-controls button:hover {
+    background-color: #FFF !important;
+    color: #000 !important;
+}
+
+/* BORDAS FINAS DO BLOG E RODAPÉ */
+body.high-contrast .blog-entry {
+    border-bottom: 1px dashed #CCC !important; /* Borda divisória mais clara */
+}
+
+body.high-contrast .footer-info a {
+    color: #FFF !important; /* Links no rodapé branco */
+}
+body.high-contrast .footer-info a:hover {
+    color: #FFFF00 !important; /* Links no rodapé amarelo ao passar o mouse */
+}
+
+/* Remove a sombra dos elementos no modo de alto contraste para maior clareza */
+body.high-contrast section,
+body.high-contrast .page-section,
+body.high-contrast .blog-post,
+body.high-contrast .project-card {
+    box-shadow: none !important;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 2px solid #e0e0e0;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+header .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-link {
+    display: block;
+    max-width: 150px;
+    height: auto;
+}
+
+.logo-link img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.slogan {
+    font-size: 0.95em;
+    font-style: italic;
+    color: #555;
+    flex-basis: 100%; /* Ocupa a largura total em telas menores */
+    text-align: center;
+    margin: 5px 0 15px 0;
+}
+
+header nav {
+    flex-basis: 100%; /* Ocupa a largura total em telas menores */
+    order: 2; /* Posiciona a navegação depois dos botões de acessibilidade em telas menores */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #007bff; /* Azul primário */
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+    background-color: #0056b3;
+    color: #fff;
+    outline: none; /* Remover outline padrão para acessibilidade */
+}
+
+/* Botões de acessibilidade */
+.accessibility-controls {
+    display: flex;
+    gap: 8px;
+    order: 1; /* Posiciona os botões antes da navegação em telas menores */
+    justify-content: center;
+    flex-basis: 100%;
+    margin-bottom: 10px;
+}
+
+.accessibility-controls button {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.accessibility-controls button:hover,
+.accessibility-controls button:focus {
+    background-color: #e0e0e0;
+    color: #000;
+    border-color: #999;
+    outline: none;
+}
+
+
+main {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+h2 {
+    color: #007bff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+h3 {
+    color: #007bff;
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.section-full-width {
+    width: 100%;
+}
+
+.section-half-width {
+    flex: 1;
+    min-width: 320px; /* Aumentado para melhor leitura em telas menores */
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.section-block {
+    flex: 1;
+    min-width: 280px;
+    border: 1px solid #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 180px; /* Aumentado para melhor visualização */
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-placeholder img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+#projetos ul {
+    list-style: none;
+    padding: 0;
+}
+
+#projetos ul li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+    padding-left: 25px;
+    position: relative;
+}
+
+#projetos ul li::before {
+    content: '✅'; /* Ícone de checkmark */
+    position: absolute;
+    left: 0;
+    color: #28a745; /* Verde */
+}
+
+.highlight {
+    font-weight: bold;
+    color: #dc3545; /* Vermelho mais vibrante */
+}
+
+.blog-entry {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #f0f0f0;
+}
+
+.blog-entry:last-child {
+    border-bottom: none;
+}
+
+.blog-entry h3 {
+    margin-bottom: 8px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover,
+.read-more:focus {
+    color: #0056b3;
+    text-decoration: underline;
+    outline: none;
+}
+
+footer {
+    background-color: #343a40; /* Cinza escuro */
+    color: white;
+    padding: 25px 0;
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.85em;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.footer-info {
+    text-align: center;
+    width: 100%;
+}
+
+.footer-info h3 {
+    margin: 0 0 10px 0;
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 0.75em;
+    line-height: 1.4;
+}
+
+.footer-info a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-info a:hover,
+.footer-info a:focus {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    header .container {
+        justify-content: space-between;
+    }
+
+    .slogan {
+        flex-basis: auto;
+        text-align: left;
+        margin: 0;
+    }
+
+    header nav {
+        flex-basis: auto;
+        order: 0; /* Volta a ordem normal */
+    }
+
+    .accessibility-controls {
+        flex-basis: auto;
+        order: 0; /* Volta a ordem normal */
+        margin-bottom: 0;
+    }
+
+    footer p {
+        width: auto;
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    .footer-info {
+        width: auto;
+        text-align: right;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    .section-full-width,
+    .section-half-width {
+        width: 100%;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
