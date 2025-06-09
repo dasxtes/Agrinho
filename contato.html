@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Conecta Rural</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-link" aria-label="Página inicial Conecta Rural">
+                <img src="imagens site agrinho/logo-removebg-preview.png" alt="Logo Conecta Rural">
+            </a>
+            <p class="slogan">"Unindo o campo e a cidade através da tecnologia e inovação"</p>
+            <nav aria-label="Navegação principal do site">
+                <ul>
+                    <li><a href="index.html">INÍCIO</a></li>
+                    <li><a href="sobre.html">SOBRE</a></li>
+                    <li><a href="projetos.html">PROJETOS</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contato.html">CONTATO</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="accessibility-controls-outside-header container">
+        <button id="increase-font" aria-label="Aumentar tamanho da fonte" title="Aumentar Fonte">A+</button>
+        <button id="decrease-font" aria-label="Diminuir tamanho da fonte" title="Diminuir Fonte">A-</button>
+        <button id="toggle-contrast" aria-label="Alternar alto contraste" title="Alto Contraste">Contraste</button>
+    </div>
+
+    <main class="container page-section">
+        <section>
+            <h2>Entre em Contato com a Conecta Rural</h2>
+            <p>Temos o prazer de ouvir você! Seja para tirar dúvidas, propor parcerias, compartilhar ideias ou solicitar informações sobre nossos projetos, utilize os canais abaixo.</p>
+
+            <div class="contact-info-grid">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>Para dúvidas gerais e informações:</p>
+                    <p><a href="mailto:contato@conectarural.com.br" aria-label="Enviar email para Conecta Rural">contato@conectarural.com.br</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Telefone</h3>
+                    <p>Atendimento de Segunda a Sexta, das 8h às 18h:</p>
+                    <p>(XX) XXXX-XXXX</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Endereço</h3>
+                    <p>Visite-nos ou envie correspondência:</p>
+                    <address>
+                        Rua da Conectividade, 123<br>
+                        Zona Rural<br>
+                        Cidade, Estado - CEP 12345-678<br>
+                        Brasil
+                    </address>
+                </div>
+                <div class="contact-item">
+                    <h3>Redes Sociais</h3>
+                    <p>Siga-nos para acompanhar as novidades:</p>
+                    <p>
+                        <a href="#" aria-label="Link para o Facebook da Conecta Rural">Facebook</a> |
+                        <a href="#" aria-label="Link para o Instagram da Conecta Rural">Instagram</a> |
+                        <a href="#" aria-label="Link para o LinkedIn da Conecta Rural">LinkedIn</a>
+                    </p>
+                </div>
+            </div>
+
+            <h3>Envie-nos uma Mensagem</h3>
+            <p>Se preferir, preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+            
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone (opcional):</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Assunto:</label>
+                    <input type="text" id="subject" name="subject" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="message">Sua Mensagem:</label>
+                    <textarea id="message" name="message" rows="6" required aria-required="true"></textarea>
+                </div>
+                <button type="submit" class="button">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy;2025 Conecta Rural - Todos os direitos reservados</p>
+            <div class="footer-info">
+                <h3>Conectividade é a nossa força.</h3>
+                <p>FONTES: IBGE, EMBRAPA, Ministério da Agricultura, Pecuária e Abastecimento.</p>
+                <p>CONTATO: <a href="mailto:contato@conectarural.com.br" aria-label="Enviar email para Conecta Rural">contato@conectarural.com.br</a> | Telefone: (XX) XXXX-XXXX</p>
+                <p>ENDEREÇO: Rua da Conectividade, 123 - Zona Rural - Cidade, Estado.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
